@@ -2,7 +2,17 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<form asp-action="Index" method="post">
+    <div>
+        <label for="">Nhập vào a: </label>
+        <input type="text" name="heSoA" />
+    </div>
+    <div>
+        <label for="">Nhập vào b: </label>
+        <input type="text" name="heSoB" />
+    </div>
+    <button>Tính</button>
+</form>
+<div>
+    Kết quả:  @ViewBag.message    
 </div>
