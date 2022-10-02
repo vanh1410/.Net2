@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "XuLyChuoi";
+}
+
+<form asp-action="Index" method="post">
+    <input type="text" name="str">
+    <button type="submit">Gui</button>
+
+    <h1 class="string">
+        @ViewBag.thongTin
+    </h1>
+</form>
+
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    console.log(params.get('str'))
+</script>
